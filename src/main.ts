@@ -1,8 +1,6 @@
-let firstName: string = 'John';
-let lastName: string = 'Doe';
+const getFullName = (name: string, surname: string): string => {
+    return name + " " + surname;
+};
 
-const age: number = 30;
+console.log(getFullName('John', 'Doe'));
 
-const isCool: boolean = true;
-
-const anyType: any = 'Any Type'
