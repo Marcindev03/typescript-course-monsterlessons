@@ -1,25 +1,23 @@
-// interface IUser
-interface UserInterface {
+type ID = string;
+type PopularTag = string;
+type MaybePopularTag = PopularTag | null;
+
+interface UserInterface  {
+    id: ID;
     name: string;
-    // ? ==> Not required 
-    age?: number;
-
-    getMessage():string;
+    surname: string;
 }
 
-const user: UserInterface = {
-    name: 'John', 
-    age: 3,
-    getMessage() {
-        return 'Hello' + this.name
-    }
-}
+const popularTags: PopularTag[] = ['dragon', 'coffe'];
 
-const user2: UserInterface = {
-    name: 'Jack',
-    getMessage() {
-        return 'Hello' + name
-    }
-}
+const dragonsTag: MaybePopularTag = 'dragon';
 
-console.log(user2.getMessage());
+let username: string = 'alex';
+
+let pageName: string | number = '1';
+
+let erroeMessage: string | null = null;
+
+let user: UserInterface | null = null;
+
+let someProp: string | number | null | undefined | string[] | object;
