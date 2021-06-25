@@ -6,14 +6,19 @@
 
 // console.log(statuses.inProgress);
 
-enum Status {
-  NotStarted,
-  InProgress,
-  Done,
+enum StatusEnum {
+  NotStarted = 'Not Started',
+  InProgress = 'In Progress',
+  Done = 'Done',
 }
 
-let notStartedStatus: Status = Status.NotStarted;
+interface Task {
+  id: string;
+  status: StatusEnum;
+}
 
-notStartedStatus = Status.Done;
+let notStartedStatus: StatusEnum = StatusEnum.NotStarted;
 
-console.log(Status.InProgress);
+notStartedStatus = StatusEnum.Done;
+
+console.log(StatusEnum.InProgress);
