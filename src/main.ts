@@ -1,35 +1,19 @@
-// const updatedArray = append<string>('baz', ['foo', 'bar']);
-// const searchStr = 'foo';
-// const hasSearchedString = any<string>(
-//   (el: string) => el.contains(searchStr),
-//   ['foooo', 'bar', 'baz']
-// );
+// const statuses = {
+//   notStarted: 0,
+//   inProgress: 1,
+//   done: 2,
+// };
 
-const addId = <T extends object>(obj: T) => {
-  const id = Math.random().toString(16);
+// console.log(statuses.inProgress);
 
-  return {
-    ...obj,
-    id,
-  };
-};
-
-interface UserInterface<T, V> {
-  name: string;
-  data: T;
-  meta: V;
+enum Status {
+  NotStarted,
+  InProgress,
+  Done,
 }
 
-const user: UserInterface<{ meta: string }, string> = {
-  name: 'Jack',
-  data: {
-    meta: 'foo',
-  },
-  meta: 'Some metadata',
-};
+let notStartedStatus: Status = Status.NotStarted;
 
-const user2: UserInterface<string[], string> = {
-  name: 'John',
-  data: ['foo', 'bar', 'baz'],
-  meta: 'Some metadata',
-};
+notStartedStatus = Status.Done;
+
+console.log(Status.InProgress);
