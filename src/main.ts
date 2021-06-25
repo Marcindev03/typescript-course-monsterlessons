@@ -1,23 +1,17 @@
-type ID = string;
-type PopularTag = string;
-type MaybePopularTag = PopularTag | null;
+const doSomething = (): void => {
+    console.log('Hello world');
+};
 
-interface UserInterface  {
-    id: ID;
-    name: string;
-    surname: string;
-}
+const someFunction = (): never => {
+    throw 'never';
+};
 
-const popularTags: PopularTag[] = ['dragon', 'coffe'];
+let vAny: any = 10;
+let vUnknown: unknown = 10;
 
-const dragonsTag: MaybePopularTag = 'dragon';
+let s1: string = vAny;
+// let s2: string = vUnknown;
 
-let username: string = 'alex';
+console.log(vAny.foo());
+// console.log(vUnknown.foo());
 
-let pageName: string | number = '1';
-
-let erroeMessage: string | null = null;
-
-let user: UserInterface | null = null;
-
-let someProp: string | number | null | undefined | string[] | object;
